@@ -1,0 +1,93 @@
+.submit-email {
+  display: flex;
+  height: 62px;
+
+  @media (min-width: $tablet-width) {
+    height: 81px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 58px;
+  }
+}
+
+.submit-email__input {
+  flex-grow: 1;
+  padding: 18px 15px 20px 20px;
+  border-radius: 10px 0 0 10px;
+  font-family: "Blogger Sans Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  border: 4px solid transparent;
+
+  &:hover {
+    background-color: $background--light;
+  }
+
+  &:focus {
+    background-color: $color-primary;
+    border: 4px solid $color-white;
+    color: $color-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 30px 27px 31px;
+    border-radius: 20px 0 0 20px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 27px 27px 29px 29px;
+  }
+
+  &::placeholder {
+    font-family: "Blogger Sans Bold", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    color: $color-grey;
+    opacity: 0.3;
+
+    @media (min-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
+
+.submit-email__input:hover::placeholder {
+  color: $color-grey;
+  opacity: 0.5;
+}
+
+.submit-email__input:focus::placeholder {
+  color: $color-white;
+  opacity: 1;
+}
+
+.submit-email__button {
+  margin-left: -8px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 325px;
+
+    &::after {
+      left: auto;
+      right: 32px;
+    }
+  }
+}
+
+.submit-email__button-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

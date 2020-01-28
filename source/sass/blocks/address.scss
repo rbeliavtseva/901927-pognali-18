@@ -1,0 +1,79 @@
+.address {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $color-primary;
+  font-family: "Blogger Sans Bold", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $color-primary--dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      top: -22px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      z-index: 10;
+      width: 90px;
+      height: 90px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -2px;
+    }
+  }
+}
+
+.address__icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: $color-secondary;
+
+  @media (min-width: $tablet-width) {
+    width: 21px;
+    height: 31px;
+    left: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 11;
+    width: 28px;
+    height: 43px;
+    left: 29px;
+    top: calc(50% + 3px);
+  }
+}
+
+.address__text {
+  display: block;
+  padding-left: 61px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 120px;
+  }
+}

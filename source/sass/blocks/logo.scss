@@ -1,0 +1,15 @@
+.logo {
+  text-align: center;
+}
+
+.logo__logo-image {
+  display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    width: 166px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 200px;
+  }
+}

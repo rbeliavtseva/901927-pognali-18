@@ -1,0 +1,73 @@
+.sign-up {
+  padding: 100px 25px 28px;
+  text-align: center;
+  background-color: $color-primary;
+
+  @media (min-width: $tablet-width) {
+    padding: 132px 75px 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 163px 75px 65px;
+  }
+}
+
+.sign-up__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.sign-up__prompt {
+  display: block;
+  margin-bottom: 20px;
+  color: $color-tertiary;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Blogger Sans Bold", "Arial", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 59px;
+    margin-left: 3px;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+  }
+}
+
+.sign-up__text {
+  margin: 0;
+  color: $color-white;
+  font-family: "Blogger Sans Light", "Arial", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+.sign-up__link {
+  display: inline-block;
+  color: $color-secondary;
+
+  &:hover,
+  &:focus {
+    color: $color-tertiary;
+  }
+
+  &:active {
+    color: rgba($color-tertiary, 0.3);
+  }
+}

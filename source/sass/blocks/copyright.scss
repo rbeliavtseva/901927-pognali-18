@@ -1,0 +1,41 @@
+.copyright {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
+}
+
+.copyright__text {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 4px;
+  color: $color-grey;
+  font-family: "Blogger Sans", "Arial", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 25px;
+    padding-top: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  min-width: 100%;
+  justify-content: space-between;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

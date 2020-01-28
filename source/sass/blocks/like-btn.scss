@@ -1,0 +1,104 @@
+.like-btn {
+  position: relative;
+  left: -38px;
+  top: 2px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 0;
+  }
+}
+
+.like-btn__input {
+  display: none;
+}
+
+.like-btn__label {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background-color: $background--light;
+  color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 13px;
+    height: 11px;
+    background-image: url("../../img/heart.svg");
+    background-repeat: no-repeat;
+    opacity: 0.3;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 17px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $background;
+
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 50px;
+    height: 50px;
+  }
+
+  .like-btn__input:checked ~ & {
+    background-color: $like-background;
+
+    &::before {
+      opacity: 1;
+      background-image: url("../../img/heart-active.svg");
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $like-background--active;
+    }
+
+    &:active::before {
+      opacity: 0.3;
+    }
+  }
+}
+
+.like-btn__count {
+  margin-left: 7px;
+  font-family: "Blogger Sans Bold", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: $button-text;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 5px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    white-space: nowrap;
+  }
+}

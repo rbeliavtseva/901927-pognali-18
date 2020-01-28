@@ -1,0 +1,95 @@
+.pagination-btn {
+  display: block;
+  min-height: 50px;
+  min-width: 50%;
+  position: relative;
+  padding: 10px;
+  padding-top: 12px;
+  border-radius: 20px;
+  font-size: 18px;
+  line-height: 18px;
+  color: $color-primary--light;
+  background-color: $color-white;
+  text-transform: uppercase;
+  text-align: center;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+  }
+
+  &--back {
+    margin-right: 1px;
+    border-radius: 20px 0 0 20px;
+
+    &::before {
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid currentColor;
+    }
+  }
+
+  &--forward {
+    border-radius: 0 20px 20px 0;
+
+    &::before {
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid currentColor;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: auto;
+    width: 55px;
+
+    &--back {
+      margin-right: 0;
+      padding-right: 0;
+      border-radius: 0;
+    }
+
+    &--forward {
+      &::before {
+        left: 15px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+
+    &::before {
+      top: 50%;
+      left: auto;
+      transform: translateY(-50%);
+    }
+
+    &--forward {
+      right: 0;
+    }
+
+    &--back {
+      padding-left: 13px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.3;
+    }
+  }
+}

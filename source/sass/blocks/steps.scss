@@ -1,0 +1,203 @@
+.steps {
+  z-index: 2;
+  padding: 0 25px;
+  padding-bottom: 39px;
+  align-self: stretch;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 19%, $color-primary 19%, $color-primary 100%);
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 100;
+    min-width: 100%;
+    padding: 0;
+  }
+}
+
+.steps__list {
+  @include reset-list;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  counter-reset: section;
+  list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    overflow: hidden;
+    min-width: 688px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 107px;
+    padding-left: 12px;
+    z-index: 100;
+    overflow: visible;
+  }
+}
+
+.steps__item {
+  padding: 1px 21px 43px 24px;
+  font-family: "Blogger Sans Bold", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: $button-text;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    min-height: 140px;
+    width: 50%;
+    padding: 30px 34px 60px 33px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 107px;
+    padding: 27px 34px 30px 21px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: -20px;
+    left: 0;
+    min-height: 20px;
+    min-width: 100%;
+    background-color: inherit;
+    border-radius: 10px 10px 0 0;
+
+    @media (min-width: $tablet-width) {
+      border-radius: 20px 0 0 0;
+      min-height: 100%;
+      min-width: 20px;
+      top: 0;
+      left: -20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      min-width: 30px;
+      border-radius: 20px 0 0 20px;
+      left: -25px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    top: 1px;
+    right: 21px;
+    font-family: inherit;
+    color: $color-white;
+    counter-increment: section;
+    content: counters(section, ".") " ";
+
+    @media (min-width: $tablet-width) {
+      left: 33px;
+      top: 90px;
+      font-size: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 27px;
+      left: auto;
+      right: 47px;
+      font-size: 24px;
+    }
+  }
+
+  &:nth-child(2n + 1) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+      width: calc(50% + 20px);
+    }
+  }
+
+  &:nth-child(2n) {
+    @media (min-width: $tablet-width) and (max-width: $tablet-max-width) {
+      width: calc(50% - 20px);
+      padding-left: 13px;
+
+      &::after {
+        left: 14px;
+      }
+    }
+  }
+
+  &:first-child {
+    background-color: $color-tertiary;
+
+    @media (min-width: $desktop-width) {
+      width: 315px;
+
+      &::before {
+        left: -15px;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: $color-tertiary--light;
+
+    @media (min-width: $desktop-width) {
+      padding-left: 15px;
+      width: 345px;
+
+      &::before {
+        left: -15px;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: $color-secondary--dark;
+
+    @media (min-width: $desktop-width) {
+      width: 345px;
+      padding-left: 17px;
+
+      &::before {
+        left: -15px;
+      }
+    }
+  }
+
+  &:last-child {
+    padding-bottom: 23px;
+    border-radius: 0 0 10px 10px;
+    background-color: $color-secondary;
+
+    @media (min-width: $tablet-width) {
+      border-radius: 0;
+      padding-left: 13px;
+
+      &::before {
+        border-radius: 0 0 0 20px;
+        min-height: 100%;
+        min-width: 20px;
+        top: 0;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 300px;
+      padding-left: 17px;
+      border-radius: 0 20px 20px 0;
+
+      &::before {
+        border-radius: 20px 0 0 20px;
+        left: -15px;
+      }
+
+      &::after {
+        right: 32px;
+      }
+    }
+  }
+}

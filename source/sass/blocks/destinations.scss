@@ -1,0 +1,140 @@
+.destinations {
+  position: relative;
+  padding: 100px 25px 0 25px;
+  background-color: $background--light;
+
+  @media (min-width: $tablet-width) {
+    padding: 130px 75px 21px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: -1;
+      width: 289px;
+      height: 575px;
+      top: 140px;
+      right: 40px;
+      background-image: url("../../img/flags-back@1x.png");
+    }
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      &::before {
+        background-image: url("../../img/flags-back@2x.png");
+        background-size: 289px auto;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding: 221px 240px 9px 131px;
+
+    &::before {
+      top: 148px;
+      right: 60px;
+    }
+  }
+}
+
+.destinations__container {
+  @media (min-width: $desktop-width) {
+    max-width: 1225px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.destinations__text-wrapper {
+  padding: 0 50px 0 25px;
+  margin-bottom: 61px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    margin-bottom: 108px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.destinations__title {
+  margin: 0;
+  margin-bottom: 20px;
+  color: $color-tertiary;
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Blogger Sans Bold", "Arial", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 57px;
+    margin-left: -3px;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 1px;
+    padding-left: 5px;
+    margin-bottom: 59px;
+  }
+}
+
+.destinations__disclaimer {
+  margin: 0;
+  color: $color-grey;
+  font-family: "Blogger Sans Light", "Arial", sans-serif;
+
+  @media (min-width: $tablet-width) {
+    width: 340px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+}
+
+.destinations__list {
+  @include reset-list;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin-bottom: 47px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+      top: -39px;
+      left: -35px;
+      background-color: $background;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 50%;
+    margin-bottom: 0;
+
+    &::before {
+      top: -71px;
+      left: -71px;
+    }
+  }
+}
+
+.destinations__button {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: -71px;
+    left: -62px;
+  }
+}

@@ -1,0 +1,155 @@
+.alphabet-filter {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  &--form {
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 20px 50px 0 rgba($color-primary--light, 0.1);
+    overflow: hidden;
+
+    @media (min-width: $tablet-width) {
+      border-radius: 10px;
+      background-color: $color-white;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      width: 730px;
+    }
+  }
+}
+
+.alphabet-filter__table-container {
+  @media (min-width: $tablet-width) {
+    padding: 34px 79px 96px 26px;
+    border-right: 1px solid $border;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 18px 86px 18px 12px;
+  }
+}
+
+.alphabet-filter__countries-list {
+  @include reset-list;
+
+  &--tablet {
+    display: none;
+  }
+
+  &--form {
+    padding: 50px 20px 10px;
+    margin-bottom: 0;
+    border: 1px solid $input-border;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    background-color: $color-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+    margin-bottom: 0;
+    padding-top: 9px;
+
+    &--tablet {
+      display: block;
+    }
+
+    &--form {
+      display: block;
+      padding: 30px 0 0 25px;
+      border: none;
+      min-width: 206px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--form {
+      min-width: 240px;
+    }
+  }
+}
+
+.alphabet-filter__letters-table {
+  border-collapse: collapse;
+  margin-bottom: 63px;
+
+  &--form {
+    margin-bottom: 0;
+    min-width: 100%;
+    background-color: $color-white;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    &--form {
+      min-width: 263px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--form {
+      min-width: auto;
+      border-collapse: separate;
+      border-spacing: 15px;
+    }
+  }
+}
+
+.alphabet-filter__link {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-grey;
+  text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-primary--light;
+  }
+
+  &:active {
+    color: $color-primary--light;
+    opacity: 0.3;
+  }
+}
+
+.alphabet-filter__cell {
+  padding: 0;
+  min-width: 44px;
+  height: 41px;
+  border: 1px solid $input-border;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+
+    &--form {
+      width: 45px;
+      height: 69px;
+      border: 1px solid $input-border;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--form {
+      width: 60px;
+      height: 70px;
+      border: none;
+    }
+  }
+}

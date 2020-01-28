@@ -1,0 +1,59 @@
+.calendar-btn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border: solid $color-black;
+    opacity: 0.3;
+    border-width: 0 1px 1px 0;
+    padding: 3px;
+    top: 4px;
+  }
+
+  &--back {
+    &::before {
+      left: 2px;
+      transform: rotate(135deg);
+    }
+  }
+
+  &--forward {
+    &::before {
+      right: 2px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+    height: 30px;
+
+    &::before {
+      width: 25px;
+      height: 25px;
+      border-width: 0 3px 3px 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    &::before {
+      opacity: 0.1;
+    }
+  }
+}

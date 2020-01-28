@@ -1,0 +1,160 @@
+.icon {
+  display: block;
+  padding: 0;
+  width: 33px;
+  height: 33px;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    width: 43px;
+    height: 43px;
+  }
+
+  &--form {
+    width: 32px;
+
+    @media (min-width: $tablet-width) {
+      width: 43px;
+    }
+  }
+}
+
+.icon__input {
+  position: absolute;
+  display: none;
+}
+
+.icon__label {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-color: $color-white;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.15;
+  }
+
+  &--plane {
+    &::after {
+      width: 14px;
+      height: 16px;
+      background-image: url("../../img/plane.svg");
+      left: calc(50% - 2px);
+    }
+  }
+
+  &--bus {
+    &::after {
+      width: 13px;
+      height: 16px;
+      background-image: url("../../img/bus.svg");
+    }
+  }
+
+  &--bike {
+    &::after {
+      width: 19px;
+      height: 17px;
+      background-image: url("../../img/bike.svg");
+    }
+  }
+
+  &--run {
+    &::after {
+      width: 15px;
+      height: 17px;
+      background-image: url("../../img/run.svg");
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 43px;
+    height: 43px;
+
+    &::before {
+      width: 43px;
+      height: 43px;
+    }
+
+    &--plane {
+      &::after {
+        width: 19px;
+        height: 21px;
+        left: calc(50% - 3px);
+      }
+    }
+
+    &--bus {
+      &::after {
+        width: 17px;
+        height: 21px;
+        left: calc(50% - 1px);
+      }
+    }
+
+    &--bike {
+      &::after {
+        width: 24px;
+        height: 21px;
+        left: calc(50% - 1px);
+      }
+    }
+
+    &--run {
+      &::after {
+        width: 20px;
+        height: 21px;
+        left: calc(50% - 2px);
+      }
+    }
+  }
+
+  &:hover {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: $checkbox-active;
+    }
+
+    &::after {
+      opacity: 0.1;
+    }
+  }
+}
+
+.icon__input:checked ~ .icon__label {
+  &::after {
+    opacity: 1;
+  }
+}
+
+.icon__input:checked ~ .icon__label:active {
+  &::before {
+    background-color: $checkbox-active;
+  }
+
+  &::after {
+    opacity: 0.3;
+  }
+}
