@@ -8,7 +8,20 @@
     &--index {
       padding-bottom: 70px;
     }
+
+    &--on-scroll {
+      padding: 18px 60px 13px 60px;
+      background-color: $color-white;
+    }
   }
+}
+
+.header--on-scroll .logo--white {
+  display: none;
+}
+
+.header--on-scroll .logo--blue {
+  display: block;
 }
 
 .header__wrapper {
@@ -79,6 +92,14 @@
       height: 2px;
       border-radius: 1px;
       background-color: $color-white;
+    }
+
+    &--on-scroll {
+      &::before {
+        left: -85px;
+        width: 45px;
+        background-color: $color-primary;
+      }
     }
   }
 }

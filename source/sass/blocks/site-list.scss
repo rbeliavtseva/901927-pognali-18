@@ -64,6 +64,10 @@
     &--white {
       padding: 0;
     }
+
+    &--on-scroll {
+      color: $color-primary;
+    }
   }
 }
 

@@ -238,6 +238,10 @@
     right: 60px;
     top: -127px;
     display: flex;
+
+    &--on-scroll {
+      top: -72px;
+    }
   }
 
   &--inner {
