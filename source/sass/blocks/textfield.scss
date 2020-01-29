@@ -52,10 +52,6 @@
   border-radius: 4px;
   resize: none;
 
-  &--invalid {
-    border-color: $input-border--error;
-  }
-
   &--profile {
     width: 100%;
     padding: 21px 25px 22px;
