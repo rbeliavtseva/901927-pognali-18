@@ -20,27 +20,6 @@
   line-height: 18px;
   border: 4px solid transparent;
 
-  &:hover {
-    background-color: $background--light;
-  }
-
-  &:focus {
-    background-color: $color-primary;
-    border: 4px solid $color-white;
-    color: $color-white;
-  }
-
-  @media (min-width: $tablet-width) {
-    padding: 30px 30px 27px 31px;
-    border-radius: 20px 0 0 20px;
-    font-size: 24px;
-    line-height: 24px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 27px 27px 29px 29px;
-  }
-
   &::placeholder {
     font-family: "Blogger Sans Bold", "Arial", sans-serif;
     font-size: 18px;
@@ -52,6 +31,36 @@
       font-size: 24px;
       line-height: 24px;
     }
+  }
+
+  &:hover {
+    background-color: $background--light;
+  }
+
+  &:focus {
+    background-color: $color-primary;
+    border: 4px solid $color-white;
+    color: $color-white;
+  }
+
+  &:invalid {
+    background-color: $error-background;
+    border: 4px solid transparent;
+
+    &::placeholder {
+      color: $error-text;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 30px 27px 31px;
+    border-radius: 20px 0 0 20px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 27px 27px 29px 29px;
   }
 }
 
