@@ -43,7 +43,9 @@
     color: $color-white;
   }
 
-  &:invalid {
+  &:invalid,
+  &--error {
+    color: $error-text;
     background-color: $error-background;
     border: 4px solid transparent;
 
