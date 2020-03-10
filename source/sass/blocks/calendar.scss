@@ -85,7 +85,9 @@
   border: 1px solid $border;
   text-align: center;
   vertical-align: middle;
-  color: rgba($color-grey, 0.3);
+  color: $color-grey;
+  background-color: $background--light;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: 77px;
@@ -95,7 +97,6 @@
     font-size: 20px;
     line-height: 18px;
     letter-spacing: 2px;
-    color: rgba($color-primary--light, 0.3);
   }
 
   @media (min-width: $desktop-width) {
@@ -103,14 +104,21 @@
     height: 71px;
     padding-left: 15px;
     padding-top: 7px;
+    font-family: "Blogger Sans", "Arial", sans-serif;
     font-size: 18px;
     line-height: 30px;
     vertical-align: top;
     text-align: left;
   }
 
+  &--disabled {
+    color: rgba($color-grey, 0.3);
+    background-color: $color-white;
+    pointer-events: none;
+  }
+
   &--selected {
-    background-color: $color-primary--light;
+    background-color: $tooltip;
     color: $color-white;
   }
 
@@ -122,22 +130,11 @@
     }
   }
 
-  &--chosen {
-    background-color: $tooltip;
-  }
-
-  &--unavailible {
-    background-color: $background--light;
-    color: $color-grey;
-
-    @media (min-width: $tablet-width) {
-      color: $color-primary--light;
-    }
-  }
-
   &:hover,
   &:focus {
     box-shadow: inset 0 0 0 2px $calendar-border;
+    background-color: $color-primary--light;
+    color: $color-white;
 
     @media (min-width: $tablet-width) {
       box-shadow: inset 0 0 0 4px $calendar-border;
