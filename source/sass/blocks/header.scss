@@ -105,9 +105,10 @@
 }
 
 .header__button {
-  display: inline-block;
+  display: none;
 
   @media (min-width: $tablet-width) {
+    display: inline-block;
     width: 25%;
     order: 2;
     padding-left: 17px;
