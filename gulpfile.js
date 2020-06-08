@@ -13,6 +13,8 @@ var imagemin = require("gulp-imagemin");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+const ghPages = require('gh-pages');
+const path = require('path');
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -82,6 +84,11 @@ gulp.task("refresh", function (done) {
   server.reload();
   done();
 })
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 gulp.task("build", gulp.series(
   "clean",

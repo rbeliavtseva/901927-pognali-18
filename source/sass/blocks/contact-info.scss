@@ -151,7 +151,7 @@
     background-color: $color-tertiary;
 
     &::before {
-      background-image: url("../../img/topmenu-phone.svg");
+      background-image: url("../img/topmenu-phone.svg");
     }
 
     &:hover,
@@ -165,7 +165,7 @@
 
     &::before {
       height: 14px;
-      background-image: url("../../img/topmenu-mail.svg");
+      background-image: url("../img/topmenu-mail.svg");
     }
 
     &:hover,

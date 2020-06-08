@@ -37,7 +37,7 @@
     display: block;
     width: 13px;
     height: 11px;
-    background-image: url("../../img/heart.svg");
+    background-image: url("../img/heart.svg");
     background-repeat: no-repeat;
     opacity: 0.3;
 
@@ -70,7 +70,7 @@
 
     &::before {
       opacity: 1;
-      background-image: url("../../img/heart-active.svg");
+      background-image: url("../img/heart-active.svg");
     }
 
     &:hover,

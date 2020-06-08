@@ -55,7 +55,7 @@
     &::after {
       width: 14px;
       height: 16px;
-      background-image: url("../../img/plane.svg");
+      background-image: url("../img/plane.svg");
       left: calc(50% - 2px);
     }
   }
@@ -64,7 +64,7 @@
     &::after {
       width: 13px;
       height: 16px;
-      background-image: url("../../img/bus.svg");
+      background-image: url("../img/bus.svg");
     }
   }
 
@@ -72,7 +72,7 @@
     &::after {
       width: 19px;
       height: 17px;
-      background-image: url("../../img/bike.svg");
+      background-image: url("../img/bike.svg");
     }
   }
 
@@ -80,7 +80,7 @@
     &::after {
       width: 15px;
       height: 17px;
-      background-image: url("../../img/run.svg");
+      background-image: url("../img/run.svg");
     }
   }
 
