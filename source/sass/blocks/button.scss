@@ -12,6 +12,7 @@
   border-radius: 10px;
   cursor: pointer;
   text-align: left;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     display: inline-block;
@@ -131,7 +132,6 @@
 
 .button--rounded {
   min-width: 189px;
-  // padding: 7px 20px 3px 20px;
   padding: 5px 22px 5px 20px;
   border-radius: 25px;
   font-size: 17px;

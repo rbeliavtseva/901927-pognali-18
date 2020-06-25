@@ -8,6 +8,7 @@
   background-color: $background--light;
   border-radius: 50%;
   cursor: pointer;
+  outline: none;
 
   &::before {
     content: "";

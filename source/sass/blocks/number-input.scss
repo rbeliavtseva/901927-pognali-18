@@ -90,6 +90,7 @@
   letter-spacing: 1px;
   color: $color-primary--light;
   text-align: center;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     padding: 21px 23px 22px 23px;
